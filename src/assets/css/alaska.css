@@ -26,7 +26,7 @@
 /* Centering the win-container in the viewport */
 .win-container {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -80,3 +80,18 @@
 .bounce-zoom-in-animation {
     animation: bounceZoomIn 0.7s forwards, wiggle 1s 0.7s infinite;
 }
+
+.back-to-wheel-btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 28px;
+    color: white;
+    background-color: #0088B9;
+    border-radius: 26px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    position: relative;
+}
+
