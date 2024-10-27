@@ -1,0 +1,82 @@
+/* body{
+    background-image: url('../images/bgnew.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+
+/* Centering the header logo at the top */
+.header {
+    position: relative;
+}
+
+.header-logo {
+    position: fixed;
+    top: 40px; /* Adjusted from 100px to give space for the .win-container */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px;
+    height: auto;
+    width: 40vw;
+    z-index: 1001;
+}
+
+/* Centering the win-container in the viewport */
+.win-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+.wiggle-animation {
+    animation: wiggle 1s infinite;
+}
+
+/* Zoom-in animations */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.zoom-in-animation {
+    animation: zoomIn 0.5s forwards, wiggle 1s 0.5s infinite;
+}
+
+@keyframes bounceZoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.bounce-zoom-in-animation {
+    animation: bounceZoomIn 0.7s forwards, wiggle 1s 0.7s infinite;
+}
